@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Cyrilshanway. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ChildViewController : ViewController
+@interface ChildViewController : UIViewController
 
 @property(nonatomic, assign)NSInteger pageIndex;
 @property(nonatomic, strong)NSString *imageFile;

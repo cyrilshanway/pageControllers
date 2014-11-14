@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Cyrilshanway. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PageViewController.h"
 #import "ChildViewController.h"
 
-@interface ViewController ()<
+@interface PageViewController ()<
 UIPageViewControllerDataSource
 >
 
@@ -17,7 +17,7 @@ UIPageViewControllerDataSource
 @property (nonatomic, strong) NSNumber*pageCount;
 @end
 
-@implementation ViewController
+@implementation PageViewController
 
 -(void)awakeFromNib{
 
@@ -74,6 +74,14 @@ UIPageViewControllerDataSource
     return childVC;
 }
 
+#pragma mark - UIPageViewControllerDataSource
+-(NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController{
+    return self.pageCount.integerValue;
+}
+
+-(NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController{
+    return 0;
+}
 #pragma mark - UIPageViewControllerDataSource
 //require
 //往前翻到頭時
